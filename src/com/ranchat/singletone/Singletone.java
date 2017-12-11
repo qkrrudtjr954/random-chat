@@ -1,7 +1,7 @@
 package com.ranchat.singletone;
 
-import com.example.dto.Chat;
-import com.example.dto.User;
+import com.ranchat.dto.Chat;
+import com.ranchat.dto.User;
 
 import java.util.List;
 
