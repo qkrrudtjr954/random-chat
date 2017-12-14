@@ -11,7 +11,7 @@ public class User {
     private char[] pwd;
     private Socket socket;
 
-
+    public User(){ }
     public User(String id, String name, char[] pwd) {
         this.id = id;
         this.name = name;
@@ -88,11 +88,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", pwd=" + Arrays.toString(pwd) +
-                ", socket=" + socket +
-                '}';
+        return this.id + "-" + new String(this.pwd) + "-" + this.name;
     }
 }

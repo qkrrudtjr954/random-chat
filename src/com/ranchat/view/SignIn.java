@@ -1,5 +1,6 @@
 package com.ranchat.view;
 
+import com.ranchat.dao.chat.Delete;
 import com.ranchat.dto.User;
 import com.ranchat.singletone.Singletone;
 
@@ -60,7 +61,11 @@ public class SignIn extends JFrame implements WindowListener, ActionListener{
         signUp.setSize(75, 50);
         signUp.addActionListener(this);
 
-        panel.add(signUp);
+        JButton h = new JButton("SIGN UP");
+        h.setSize(75, 50);
+        h.addActionListener(this);
+
+        panel.add(h);
 
         contentPane.add(panel);
 
@@ -73,6 +78,8 @@ public class SignIn extends JFrame implements WindowListener, ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         Object obj = e.getSource();
+
+        Singletone.getInstance().getUsers().forEach(System.out::println);
 
         if(obj == signIn){
             String id = this.id.getText();
@@ -90,8 +97,7 @@ public class SignIn extends JFrame implements WindowListener, ActionListener{
             new SignUp();
             this.dispose();
         }else{
-            new Main();
-            this.dispose();
+
         }
     }
 

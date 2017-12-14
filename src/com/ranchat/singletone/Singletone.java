@@ -42,6 +42,4 @@ public class Singletone {
     public User getCurrentUser(){ return this.current_user; }
 
     public void setCurrentUser(User user){ this.current_user = user; }
-
-    public void addUser(User user){ this.users.add(user); }
 }
