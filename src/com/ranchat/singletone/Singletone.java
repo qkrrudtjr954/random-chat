@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Singletone {
     private static Singletone instance = null;
+    private User current_user = null;
     private List<User> users;
     private List<Chat> chats;
 
@@ -32,4 +33,8 @@ public class Singletone {
     public void setUsers(List<User> users) {
         this.users = users;
     }
+
+    public User getCurrentUser(){ return this.current_user; }
+
+    public void setCurrentUser(User user){ this.current_user = user; }
 }
